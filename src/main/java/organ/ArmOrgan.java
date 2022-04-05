@@ -10,4 +10,5 @@ public class ArmOrgan extends Organ {
     public static ArmOrgan create() {
         return new ArmOrgan(80);
     }
+
 }

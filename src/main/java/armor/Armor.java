@@ -21,6 +21,13 @@ public abstract class Armor implements Damageable {
 
     @Override
     public boolean takeDamage(double force) {
-        return false;
+        durability-= force/k;
+        durability = Math.round(durability);
+
+        if(durability>0)
+            return false;
+        else
+            return true;
+
     }
 }

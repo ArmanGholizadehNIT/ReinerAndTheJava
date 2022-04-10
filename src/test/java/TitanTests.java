@@ -21,6 +21,7 @@ public class TitanTests {
 
     @Test
    public void FaceOrganTest(){
+
         ArmoredTitan Titan = ArmoredTitan.create();
 
 
@@ -29,11 +30,15 @@ public class TitanTests {
 
         assertEquals(23,Titan.getFaceOrgan().getHp()); //remaining hp
 
+        /**
+         * damaging armor
+         */
+
         Titan.getFaceOrgan().getArmor().takeDamage(19);
 
         assertEquals(49,Titan.getFaceOrgan().getArmor().getDurability()); //remaining armor durability
 
-
+        //is the organ destroyed?
 
         assertFalse(Titan.getFaceOrgan().takeDamage(0)); //expecting false
 
@@ -42,6 +47,10 @@ public class TitanTests {
         assertTrue(Titan.getFaceOrgan().getArmor().takeDamage(88.2)); //expectring true
 
         Titan.getFaceOrgan().takeDamage(13);
+
+        /**
+         * checking hp
+         */
         assertEquals(10,Titan.getFaceOrgan().getHp());
 
     }
@@ -56,6 +65,9 @@ public class TitanTests {
         Titan.getLeftArmOrgan().takeDamage(10);
 
         assertEquals(73.75,Titan.getLeftArmOrgan().getHp());
+        /**
+         * damaging armor
+         */
 
         Titan.getLeftArmOrgan().getArmor().takeDamage(13);
 
@@ -75,6 +87,10 @@ public class TitanTests {
 
 
         Titan.getLeftArmOrgan().takeDamage(7.75);
+
+        /**
+         * checking hp
+         */
         assertEquals(66,Math.round(Titan.getLeftArmOrgan().getHp()));
 
 
@@ -90,6 +106,10 @@ public class TitanTests {
         Titan.getRightArmOrgan().takeDamage(12);
 
         assertEquals(72.5,Titan.getRightArmOrgan().getHp());
+
+        /**
+         * damaging armor
+         */
 
         Titan.getRightArmOrgan().getArmor().takeDamage(14);
 
@@ -108,6 +128,10 @@ public class TitanTests {
         assertTrue(Titan.getRightArmOrgan().getArmor().takeDamage(245)); //expecting true
 
         Titan.getRightArmOrgan().takeDamage(13.5);
+
+        /**
+         * checking hp
+         */
         assertEquals(59, Math.round(Titan.getRightArmOrgan().getHp()));
 
 
@@ -122,6 +146,10 @@ public class TitanTests {
         Titan.getChestOrgan().takeDamage(200);
 
         assertEquals(125,Titan.getChestOrgan().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getChestOrgan().getArmor().takeDamage(100);
@@ -141,6 +169,10 @@ public class TitanTests {
         assertTrue(Titan.getChestOrgan().getArmor().takeDamage(1305)); //expecting true
 
         Titan.getChestOrgan().takeDamage(100);
+
+        /**
+         * checking hp
+         */
         assertEquals(25,Titan.getChestOrgan().getHp());
 
 
@@ -155,6 +187,10 @@ public class TitanTests {
         Titan.getStomachOrgan().takeDamage(30);
 
         assertEquals(35,Titan.getStomachOrgan().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getStomachOrgan().getArmor().takeDamage(100);
@@ -175,6 +211,10 @@ public class TitanTests {
         assertEquals(0,Titan.getStomachOrgan().getArmor().getDurability());
 
         Titan.getStomachOrgan().takeDamage(20);
+
+        /**
+         * checking hp
+         */
         assertEquals(15,Titan.getStomachOrgan().getHp());
 
 
@@ -190,6 +230,10 @@ public class TitanTests {
         Titan.getNeckOrgan().takeDamage(25);
 
         assertEquals(26.25,Titan.getNeckOrgan().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getNeckOrgan().getArmor().takeDamage(40);
@@ -211,6 +255,10 @@ public class TitanTests {
         assertEquals(0,Titan.getNeckOrgan().getArmor().getDurability());
 
         Titan.getNeckOrgan().takeDamage(6.25);
+
+        /**
+         * checking hp
+         */
         assertEquals(20,Titan.getNeckOrgan().getHp());
 
 
@@ -229,6 +277,10 @@ public class TitanTests {
         Titan.getLeftLegArmor().takeDamage(33);
 
         assertEquals(40.15,Titan.getLeftLegArmor().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getLeftLegArmor().getArmor().takeDamage(44);
@@ -249,6 +301,10 @@ public class TitanTests {
         assertEquals(0,Titan.getLeftLegArmor().getArmor().getDurability());
 
         Titan.getLeftLegArmor().takeDamage(10);
+
+        /**
+         * checking hp
+         */
         assertEquals(30.15,Titan.getLeftLegArmor().getHp());
 
 
@@ -263,6 +319,10 @@ public class TitanTests {
         Titan.getRightLegArmor().takeDamage(41);
 
         assertEquals(36.55,Titan.getRightLegArmor().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getRightLegArmor().getArmor().takeDamage(56);
@@ -288,6 +348,10 @@ public class TitanTests {
 
         Titan.getRightLegArmor().takeDamage(6.55);
 
+        /**
+         * checking hp
+         */
+
         assertEquals(30,Math.round(Titan.getRightLegArmor().getHp()));
 
 
@@ -302,6 +366,10 @@ public class TitanTests {
         Titan.getRightFootOrgan().takeDamage(31);
 
         assertEquals(25.8265,Titan.getRightFootOrgan().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getRightFootOrgan().getArmor().takeDamage(56);
@@ -322,6 +390,9 @@ public class TitanTests {
 
         Titan.getRightFootOrgan().takeDamage(10.8265);
 
+        /**
+         * checking hp
+         */
         assertEquals(15,Titan.getRightFootOrgan().getHp());
 
 
@@ -339,6 +410,10 @@ public class TitanTests {
         Titan.getLeftFootOrgan().takeDamage(27);
 
         assertEquals(28.3005,Titan.getLeftFootOrgan().getHp());
+
+        /**
+         * damaging armor
+         */
 
 
         Titan.getLeftFootOrgan().getArmor().takeDamage(71);
@@ -359,6 +434,9 @@ public class TitanTests {
 
         Titan.getLeftFootOrgan().takeDamage(12.3005);
 
+        /**
+ * checking hp
+ */
         assertEquals(16,Titan.getLeftFootOrgan().getHp());
 
 
